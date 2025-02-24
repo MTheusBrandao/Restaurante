@@ -24,8 +24,8 @@ public class PedidoController {
         return pedidoService.salvarPedido(pedido);
     }
 
-    @GetMapping
-    public List<Pedido> listarPedidos(@PathVariable Long usuarioId) {
+    @GetMapping("/{usuarioId}")
+    public List<Pedido> listarPedidosPorUsuario(@PathVariable Long usuarioId) {
         return pedidoService.listarPedidosPorUsuario(usuarioId);
     }
 
